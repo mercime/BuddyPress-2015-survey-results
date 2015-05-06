@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Visualization of Plugins Used in BuddyPress Sites- 2015 BuddyPress Survey Results">
+	<meta name="author" content="Mercime for BuddyPress.org">
+	<meta name="keywords" content="buddypress, buddypress.org, survey, survey results">
+	<title>BuddyPress Plugins Activated - BuddyPress 2015 Survey Results</title>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" href="css/customi.min.css">
+	<!--[if lt IE 9]>
+		<script src="/js/modernizr.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="buddypress" class="hfeed site">
+		<div id="header" class="row index">
+			<header class="represent" role="banner">
+				<h1 class="title"><a href="index.html"><img src="images/buddypress.png" class="logo" alt="BuddyPress Logo" /><br />BuddyPress 2015 Survey Results</a></h1>
+			</header>
+		</div><!-- #header -->
+
+		<main id="content" class="main-content" role="main">
+			<section class="row plugins-used">
+				<header class="entry-header">
+					<h2 class="entry-title">Plugins Used in BuddyPress Sites</h2>
+				</header>
+				<div class="center block-svg">
+					<form>
+						<label><input type="radio" name="mode" value="radialcluster">Radial Cluster</label>
+						<label><input type="radio" name="mode" value="cluster" checked>Cluster</label>
+					</form>
+					<figure id="plugins-used-bp" ></figure>
+					<p>You can view the accessible version of the list of plugins used by the survey respondents at <a href="plugins-table.html">this LINK</a>.</p>
+					<div class="buttons clearfix">
+						<a href="index.html" class="button">Back to the Survey Graphs</a> 
+						<a href="https://buddypress.org/blog/" class="button">Back to the Survey Report</a> 
+						<a href="#" onclick="scrollToTop();return false" class="button" title="Back to the top of the Survey Results Page">Top of Page &uarr; </a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div id="footer" class="row">
+			<footer class="col12" role="contentinfo">
+				<p>&copy; 2015 <a href="humans.txt">BuddyPress.org</a> &hearts;</p>
+			</footer>
+		</div><!-- #footer -->
+	</div><!-- #buddypress -->
+<script src="js/d3.min.js"></script>
+<script src="js/plugins-bp.min.js"></script>
+<script>
+	var timeOut;
+	function scrollToTop() {
+	  if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+		window.scrollBy(0,-50);
+		timeOut=setTimeout('scrollToTop()',10);
+	  }
+	  else clearTimeout(timeOut);
+	}
+</script>
+</body>
+</html>
